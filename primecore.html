@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moloto Heights</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.65;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+      padding: 1.8rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .logo-img {
+      height: 280px;
+      width: auto;
+      max-width: 95vw;
+      display: block;
+    }
+
+    .main-content {
+      padding: 340px 5% 120px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .property-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+      transition: all 0.42s ease;
+      cursor: pointer;
+    }
+
+    .property-card:hover {
+      transform: translateY(-16px);
+      box-shadow: 0 36px 80px rgba(0,0,0,0.20);
+    }
+
+    .property-image-container {
+      position: relative;
+    }
+
+    .main-property-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .badge {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: #dc2626;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 20px rgba(220,38,38,0.35);
+    }
+
+    .property-title {
+      text-align: center;
+      padding: 3rem 1rem 4rem;
+    }
+
+    .property-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 5.2rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 1.4rem 6%; }
+      .logo-img { height: 180px; }
+      .main-content { padding: 240px 5% 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.postimg.cc/RZKQQtSX/Whats-App-Image-2026-02-09-at-12-53-13.jpg" 
+         alt="PrimeCore Logo" class="logo-img">
+  </header>
+
+  <div class="main-content">
+    <div class="property-list">
+
+      <!-- Property 1: Moloto Heights -->
+      <div class="property-card" onclick="openDetail(0)">
+        <div class="property-image-container">
+          <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
+               alt="Moloto Heights" class="main-property-image">
+          <div class="badge">UNIT TO LET</div>
+        </div>
+        <div class="property-title">
+          <h1>Moloto Heights</h1>
+        </div>
+      </div>
+
+      <!-- Property 2: Prop 2 (exact duplicate style, new description) -->
+      <div class="property-card" onclick="openDetail(1)">
+        <div class="property-image-container">
+          <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
+               alt="Prop 2" class="main-property-image">
+          <div class="badge">UNIT TO LET</div>
+        </div>
+        <div class="property-title">
+          <h1>Prop 2</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const properties = [
+      {
+        title: "Moloto Heights",
+        images: [
+          "https://i.postimg.cc/yYNbPvtg/height-gate.jpg",
+          "https://i.postimg.cc/6QYFfgz6/Whats-App-Image-2026-02-09-at-13-05-00.jpg",
+          "https://i.postimg.cc/Rhn89FBy/Whats-App-Image-2026-02-09-at-13-05-01-(1).jpg",
+          "https://i.postimg.cc/fTYzfW9P/Whats-App-Image-2026-02-09-at-13-05-01-(2).jpg",
+          "https://i.postimg.cc/qR9r2WMT/Whats-App-Image-2026-02-09-at-13-05-01-(3).jpg",
+          "https://i.postimg.cc/nhKyCCQy/Whats-App-Image-2026-02-09-at-13-05-00-(2).jpg",
+          "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg",
+          "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg"
+        ],
+        description: `Secure complex in Soweto Protea North, 1 bed with build in cupboads, toilet and bath, fitted kitchen with stove, sitting room with DSTV port, parking area, swimming pool, Kids play area, FREE unlimited WIFI, intercom, electric fence all round, remote controlled access gate and CCTV cameras 24/7
+Only R4500 per month, deposit is R3500
+Just a walk away from:-
+• Protea Point
+• BP - Filling Station
+• Hospital/Clinic
+• SAPS - Protea North
+• Khutala Primary School
+• Tetelo Secondary School
+• Reasoma High School
+• Shopping Centre
+• Protea Gardens Mall
+• All types of public transport`
+      },
+      {
+        title: "Prop 2",
+        images: [
+          "https://i.postimg.cc/3wZWCXk7/Whats-App-Image-2026-02-09-at-14-50-40.jpg", // main image for Prop 2 (you can change this)
+          "https://i.postimg.cc/DwLSmkF5/Whats-App-Image-2026-02-09-at-14-50-40-(1).jpg",
+          "https://i.postimg.cc/3RJNLkGs/Whats-App-Image-2026-02-09-at-14-50-41-(1).jpg",
+          "https://i.postimg.cc/kGH2R72r/Whats-App-Image-2026-02-09-at-14-50-41-(2).jpg",
+          "https://i.postimg.cc/tJFgJFGW/Whats-App-Image-2026-02-09-at-14-50-41.jpg",
+          "https://i.postimg.cc/7YM6y1NQ/Whats-App-Image-2026-02-09-at-14-50-42-(1).jpg",
+          "https://i.postimg.cc/s21DSkC8/Whats-App-Image-2026-02-09-at-14-50-42-(2).jpg",
+          "https://i.postimg.cc/tgfRzBX3/Whats-App-Image-2026-02-09-at-14-50-42.jpg"
+        ],
+        description: `Secure Rooms in Soweto Protea Glen EXT7, toilet, shower and bath for sharing,DSTV port, parking area ,FREE unlimited WIFI, electric fence all round, remote controlled access for R1800 per month deposit R1000( payable over 2 months)
+Walking distance from many amenities i.e shopping Mall,Schools, Churches, filling station & All types of Public transport.`
+      }
+    ];
+
+    function openDetail(index) {
+      const prop = properties[index];
+      const detailPage = 
+        '<!DOCTYPE html>\n' +
+        '<html lang="en">\n' +
+        '<head>\n' +
+        '  <meta charset="UTF-8">\n' +
+        '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+        '  <title>' + prop.title + ' – Details</title>\n' +
+        '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n' +
+        '  <style>\n' +
+        '    body { font-family:\'Inter\',system-ui,sans-serif; background:#f9fafb; color:#111827; line-height:1.72; margin:0; padding:0; }\n' +
+        '    .container { max-width:960px; margin:0 auto; padding:2.5rem 5%; text-align:center; }\n' +
+        '    .back { display:inline-flex; align-items:center; font-size:2.4rem; color:#1d4ed8; text-decoration:none; margin:1.8rem 0 2.5rem; font-weight:500; transition:color .25s; }\n' +
+        '    .back:hover { color:#1e40af; }\n' +
+        '    .main-image-container { max-width:100%; border-radius:14px; overflow:hidden; box-shadow:0 22px 60px rgba(0,0,0,0.14); margin-bottom:2.5rem; cursor:pointer; }\n' +
+        '    .main-image { width:100%; height:auto; display:block; }\n' +
+        '    .description { font-size:1.08rem; color:#374151; white-space:pre-line; text-align:left; max-width:820px; margin:0 auto 3.5rem; }\n' +
+        '    .fullscreen-modal { position:fixed; inset:0; background:rgba(0,0,0,0.96); z-index:2000; display:none; align-items:center; justify-content:center; }\n' +
+        '    .fullscreen-modal.active { display:flex; }\n' +
+        '    .modal-content { position:relative; max-width:96%; max-height:94vh; }\n' +
+        '    .modal-img { max-width:100%; max-height:94vh; object-fit:contain; border-radius:10px; box-shadow:0 0 70px rgba(0,0,0,0.7); }\n' +
+        '    .close-btn { position:absolute; top:25px; left:25px; background:rgba(255,255,255,0.18); color:white; width:55px; height:55px; border-radius:50%; font-size:2.2rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.25s; backdrop-filter:blur(4px); }\n' +
+        '    .close-btn:hover { background:rgba(255,255,255,0.35); }\n' +
+        '    .nav-arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.18); color:white; width:65px; height:65px; border-radius:50%; font-size:2.4rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.25s; backdrop-filter:blur(4px); }\n' +
+        '    .nav-arrow:hover { background:rgba(255,255,255,0.35); }\n' +
+        '    .prev { left:25px; }\n' +
+        '    .next { right:25px; }\n' +
+        '    @media (max-width:768px) { .container { padding:1.8rem 6%; } .back { font-size:2.1rem; } .nav-arrow { width:55px; height:55px; font-size:2rem; } .close-btn { width:48px; height:48px; font-size:1.8rem; top:18px; left:18px; } }\n' +
+        '  </style>\n' +
+        '</head>\n' +
+        '<body>\n' +
+        '  <div class="container">\n' +
+        '    <a href="javascript:window.close()" class="back">← Back</a>\n' +
+        '    <div class="main-image-container" id="mainImage">\n' +
+        '      <img src="' + prop.images[0] + '" alt="' + prop.title + ' Main View" class="main-image">\n' +
+        '    </div>\n' +
+        '    <div class="description">' + prop.description.replace(/\n/g, '<br>') + '</div>\n' +
+        '  </div>\n\n' +
+        '  <div class="fullscreen-modal" id="modal">\n' +
+        '    <div class="modal-content">\n' +
+        '      <div class="close-btn" onclick="closeModal()">×</div>\n' +
+        '      <img id="modalImg" class="modal-img" src="" alt="">\n' +
+        '      <div class="nav-arrow prev" onclick="changeImage(-1)">←</div>\n' +
+        '      <div class="nav-arrow next" onclick="changeImage(1)">→</div>\n' +
+        '    </div>\n' +
+        '  </div>\n\n' +
+        '  <script>\n' +
+        '    const images = ' + JSON.stringify(prop.images) + ';\n' +
+        '    let currentIndex = 0;\n' +
+        '    document.getElementById("mainImage").onclick = () => {\n' +
+        '      currentIndex = 0;\n' +
+        '      document.getElementById("modalImg").src = images[currentIndex];\n' +
+        '      document.getElementById("modal").classList.add("active");\n' +
+        '    };\n' +
+        '    function closeModal() {\n' +
+        '      document.getElementById("modal").classList.remove("active");\n' +
+        '    }\n' +
+        '    function changeImage(direction) {\n' +
+        '      currentIndex += direction;\n' +
+        '      if (currentIndex >= images.length) currentIndex = 0;\n' +
+        '      if (currentIndex < 0) currentIndex = images.length - 1;\n' +
+        '      document.getElementById("modalImg").src = images[currentIndex];\n' +
+        '    }\n' +
+        '    document.addEventListener("keydown", e => {\n' +
+        '      if (e.key === "Escape") closeModal();\n' +
+        '      if (e.key === "ArrowLeft") changeImage(-1);\n' +
+        '      if (e.key === "ArrowRight") changeImage(1);\n' +
+        '    });\n' +
+        '    </scr' + 'ipt>\n' +
+        '</body>\n' +
+        '</html>';
+
+      const win = window.open('', '_blank');
+      win.document.write(detailPage);
+      win.document.close();
+    }
+  </script>
+
+</body>
+</html>
