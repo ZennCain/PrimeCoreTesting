@@ -117,8 +117,8 @@
   <div class="main-content">
     <div class="property-list">
 
-      <!-- Property 1: Moloto Heights -->
-      <div class="property-card" onclick="openDetail(0)">
+      <!-- Property 1: Moloto Heights (kept unchanged) -->
+      <div class="property-card" onclick="openDetail()">
         <div class="property-image-container">
           <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
                alt="Moloto Heights" class="main-property-image">
@@ -129,8 +129,8 @@
         </div>
       </div>
 
-      <!-- Property 2: Prop 2 (exact duplicate style, new description) -->
-      <div class="property-card" onclick="openDetail(1)">
+      <!-- Property 2: Prop 2 (your original duplicate) -->
+      <div class="property-card" onclick="openDetail()">
         <div class="property-image-container">
           <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
                alt="Prop 2" class="main-property-image">
@@ -141,63 +141,65 @@
         </div>
       </div>
 
+      <!-- Property 3: Exact duplicate of Prop 2 -->
+      <div class="property-card" onclick="openDetail()">
+        <div class="property-image-container">
+          <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
+               alt="Prop 3" class="main-property-image">
+          <div class="badge">UNIT TO LET</div>
+        </div>
+        <div class="property-title">
+          <h1>Prop 3</h1>
+        </div>
+      </div>
+
+      <!-- Property 4: Exact duplicate of Prop 2 -->
+      <div class="property-card" onclick="openDetail()">
+        <div class="property-image-container">
+          <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
+               alt="Prop 4" class="main-property-image">
+          <div class="badge">UNIT TO LET</div>
+        </div>
+        <div class="property-title">
+          <h1>Prop 4</h1>
+        </div>
+      </div>
+
+      <!-- Property 5: Exact duplicate of Prop 2 -->
+      <div class="property-card" onclick="openDetail()">
+        <div class="property-image-container">
+          <img src="https://i.postimg.cc/yYNbPvtg/height-gate.jpg" 
+               alt="Prop 5" class="main-property-image">
+          <div class="badge">UNIT TO LET</div>
+        </div>
+        <div class="property-title">
+          <h1>Prop 5</h1>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <script>
-    const properties = [
-      {
-        title: "Moloto Heights",
-        images: [
-          "https://i.postimg.cc/yYNbPvtg/height-gate.jpg",
-          "https://i.postimg.cc/6QYFfgz6/Whats-App-Image-2026-02-09-at-13-05-00.jpg",
-          "https://i.postimg.cc/Rhn89FBy/Whats-App-Image-2026-02-09-at-13-05-01-(1).jpg",
-          "https://i.postimg.cc/fTYzfW9P/Whats-App-Image-2026-02-09-at-13-05-01-(2).jpg",
-          "https://i.postimg.cc/qR9r2WMT/Whats-App-Image-2026-02-09-at-13-05-01-(3).jpg",
-          "https://i.postimg.cc/nhKyCCQy/Whats-App-Image-2026-02-09-at-13-05-00-(2).jpg",
-          "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg",
-          "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg"
-        ],
-        description: `Secure complex in Soweto Protea North, 1 bed with build in cupboads, toilet and bath, fitted kitchen with stove, sitting room with DSTV port, parking area, swimming pool, Kids play area, FREE unlimited WIFI, intercom, electric fence all round, remote controlled access gate and CCTV cameras 24/7
-Only R4500 per month, deposit is R3500
-Just a walk away from:-
-• Protea Point
-• BP - Filling Station
-• Hospital/Clinic
-• SAPS - Protea North
-• Khutala Primary School
-• Tetelo Secondary School
-• Reasoma High School
-• Shopping Centre
-• Protea Gardens Mall
-• All types of public transport`
-      },
-      {
-        title: "Prop 2",
-        images: [
-          "https://i.postimg.cc/3wZWCXk7/Whats-App-Image-2026-02-09-at-14-50-40.jpg", // main image for Prop 2 (you can change this)
-          "https://i.postimg.cc/DwLSmkF5/Whats-App-Image-2026-02-09-at-14-50-40-(1).jpg",
-          "https://i.postimg.cc/3RJNLkGs/Whats-App-Image-2026-02-09-at-14-50-41-(1).jpg",
-          "https://i.postimg.cc/kGH2R72r/Whats-App-Image-2026-02-09-at-14-50-41-(2).jpg",
-          "https://i.postimg.cc/tJFgJFGW/Whats-App-Image-2026-02-09-at-14-50-41.jpg",
-          "https://i.postimg.cc/7YM6y1NQ/Whats-App-Image-2026-02-09-at-14-50-42-(1).jpg",
-          "https://i.postimg.cc/s21DSkC8/Whats-App-Image-2026-02-09-at-14-50-42-(2).jpg",
-          "https://i.postimg.cc/tgfRzBX3/Whats-App-Image-2026-02-09-at-14-50-42.jpg"
-        ],
-        description: `Secure Rooms in Soweto Protea Glen EXT7, toilet, shower and bath for sharing,DSTV port, parking area ,FREE unlimited WIFI, electric fence all round, remote controlled access for R1800 per month deposit R1000( payable over 2 months)
-Walking distance from many amenities i.e shopping Mall,Schools, Churches, filling station & All types of Public transport.`
-      }
+    const images = [
+      "https://i.postimg.cc/yYNbPvtg/height-gate.jpg",
+      "https://i.postimg.cc/6QYFfgz6/Whats-App-Image-2026-02-09-at-13-05-00.jpg",
+      "https://i.postimg.cc/Rhn89FBy/Whats-App-Image-2026-02-09-at-13-05-01-(1).jpg",
+      "https://i.postimg.cc/fTYzfW9P/Whats-App-Image-2026-02-09-at-13-05-01-(2).jpg",
+      "https://i.postimg.cc/qR9r2WMT/Whats-App-Image-2026-02-09-at-13-05-01-(3).jpg",
+      "https://i.postimg.cc/nhKyCCQy/Whats-App-Image-2026-02-09-at-13-05-00-(2).jpg",
+      "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg",
+      "https://i.postimg.cc/449sX4BQ/Whats-App-Image-2026-02-09-at-13-05-01.jpg"
     ];
 
-    function openDetail(index) {
-      const prop = properties[index];
+    function openDetail() {
       const detailPage = 
         '<!DOCTYPE html>\n' +
         '<html lang="en">\n' +
         '<head>\n' +
         '  <meta charset="UTF-8">\n' +
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-        '  <title>' + prop.title + ' – Details</title>\n' +
+        '  <title>Property Details</title>\n' +
         '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\n' +
         '  <style>\n' +
         '    body { font-family:\'Inter\',system-ui,sans-serif; background:#f9fafb; color:#111827; line-height:1.72; margin:0; padding:0; }\n' +
@@ -224,9 +226,12 @@ Walking distance from many amenities i.e shopping Mall,Schools, Churches, fillin
         '  <div class="container">\n' +
         '    <a href="javascript:window.close()" class="back">← Back</a>\n' +
         '    <div class="main-image-container" id="mainImage">\n' +
-        '      <img src="' + prop.images[0] + '" alt="' + prop.title + ' Main View" class="main-image">\n' +
+        '      <img src="' + images[0] + '" alt="Property Main View" class="main-image">\n' +
         '    </div>\n' +
-        '    <div class="description">' + prop.description.replace(/\n/g, '<br>') + '</div>\n' +
+        '    <div class="description">\n' +
+        'Secure Rooms in Soweto Protea Glen EXT7, toilet, shower and bath for sharing,DSTV port, parking area ,FREE unlimited WIFI, electric fence all round, remote controlled access for R1800 per month deposit R1000( payable over 2 months)\n' +
+        'Walking distance from many amenities i.e shopping Mall,Schools, Churches, filling station & All types of Public transport.\n' +
+        '    </div>\n' +
         '  </div>\n\n' +
         '  <div class="fullscreen-modal" id="modal">\n' +
         '    <div class="modal-content">\n' +
@@ -237,7 +242,7 @@ Walking distance from many amenities i.e shopping Mall,Schools, Churches, fillin
         '    </div>\n' +
         '  </div>\n\n' +
         '  <script>\n' +
-        '    const images = ' + JSON.stringify(prop.images) + ';\n' +
+        '    const images = ' + JSON.stringify(images) + ';\n' +
         '    let currentIndex = 0;\n' +
         '    document.getElementById("mainImage").onclick = () => {\n' +
         '      currentIndex = 0;\n' +
@@ -265,7 +270,7 @@ Walking distance from many amenities i.e shopping Mall,Schools, Churches, fillin
       const win = window.open('', '_blank');
       win.document.write(detailPage);
       win.document.close();
-    }
+    };
   </script>
 
 </body>
